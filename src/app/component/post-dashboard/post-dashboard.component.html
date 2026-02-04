@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <div class="row m-0">
+        <div class="col-md-6 offset-3">
+
+            <app-post-form>
+
+            </app-post-form>
+
+        </div>
+    </div>
+</div>
+
+<div class="row m-0">
+    <div class="col-md-6 offset-3">
+        <app-post-card [postObj]="p" *ngFor="let p of postArr">
+
+        </app-post-card>
+    </div>
+</div>

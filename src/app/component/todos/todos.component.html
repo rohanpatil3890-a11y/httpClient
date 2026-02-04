@@ -1,0 +1,58 @@
+
+<div class="card p-3">
+    <form [formGroup]="todoForm" (ngSubmit)="OnAddTodo()">
+        <div class="form-group">
+            <label for="todoName">Todo Name</label>
+            <input
+            formControlName="todoName"
+            type="text" class="form-control">
+        </div>
+        <button *ngIf="!isInEditMode" class="btn btn-sm btn-block btn-primary"> Add Todo</button>
+        <button
+        (click)="onUpdate()"
+        *ngIf="isInEditMode" type="button"  class="btn btn-sm btn-block btn-success"> Update Todo</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="card p-3">
+    <form [formGroup]="todoForm" (ngSubmit)="addTodo()">
+    <div class="form-group">
+        <label for="todoName">todoName</label>
+        <input
+        formControlName="todoName"
+        type="text" class="form-control">
+
+        <strong class="text-danger" *ngIf="formTodoFormControls['todoName'].touched && formTodoFormControls['todoName'].hasError('required')">
+           Username is required field
+        </strong>
+    </div>
+    <button *ngIf="!isInEditMode" class="btn btn-block btn-sm btn-primary">Add Todo</button>
+     <button *ngIf="isInEditMode"
+     (click)="onUpdate()"
+     type="button"
+     class="btn btn-block btn-sm btn-primary">Update Todo</button>
+</form>
+</div> -->

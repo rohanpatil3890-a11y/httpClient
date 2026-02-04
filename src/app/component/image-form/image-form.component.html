@@ -1,0 +1,30 @@
+<div class="card p-3">
+    <form [formGroup]="ImageForm" (ngSubmit)="OnAddNewImg()">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input formControlName="title" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="imgUrl">imgUrl</label>
+            <input formControlName="imgUrl" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="albumId">Album Id</label>
+           <select class="form-control" formControlName="albumId">
+             <option 
+              *ngFor="let val of albumIdArr"
+             [value]="val">{{val}}</option>
+            
+           </select>
+        </div>
+        <button 
+        *ngIf="!IsInEditMode"
+        class="btn btn-block btn-sm btn-primary">Add Image</button>
+         <button
+          *ngIf="IsInEditMode"
+         (click)="onUpdate()"
+         type="button"
+        
+         class="btn btn-block btn-sm btn-success">Update Image</button>
+    </form>
+</div>

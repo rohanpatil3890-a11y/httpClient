@@ -1,0 +1,70 @@
+
+  <ul class="list-group" *ngIf="todoArr.length > 0 ; else : NoTOdos">
+    <li
+    *ngFor="let todo of todoArr trackBy : trackById"
+    class="list-group-item d-flex justify-content-between align-items-center">
+    <strong> {{todo.todoName}}</strong>
+    <div>
+      <button 
+      (click)="onEdit(todo)"
+      class="ml-2" mat-mini-fab color="primary">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button
+      (click)="onRemove(todo.todoId)"
+      class="ml-2"  mat-mini-fab color="warn">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+    </li>
+  </ul>
+
+  <ng-template #NoTOdos>
+    <p class="alert alert-primary">
+      NO TODOS !!!
+    </p>
+  </ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ul class="list-group">
+  <li *ngFor="let todo of todoArr trackBy : trackById"
+    class="list-group-item d-flex justify-content-between align-items-center">
+    <strong>{{todo.todoName}}</strong>
+    <div>
+      <button (click)="onEdit(todo)" mat-mini-fab color="primary">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button class="ml-2" (click)="onRemove(todo.todoId)" mat-mini-fab color="warn">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </li>
+</ul> -->

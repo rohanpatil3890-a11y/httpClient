@@ -1,0 +1,19 @@
+ <div class="card">
+    <div class="card-header">
+        <strong>{{imageObj.title}}</strong>
+    </div>
+    <div class="card-body cardImg">
+        <img [src]="imageObj.imgUrl">
+
+    </div>
+    <div class="card-footer d-flex justify-content-between align-items-center">
+
+        <button 
+        (click)="onEdit(imageObj)"
+        mat-raised-button color="accent">Edit</button>
+        <a class="ClickBtn" [href]="imageObj.imgUrl">click</a>
+        <button
+         (click)="onRemove(imageObj.imgId)"
+        mat-raised-button color="warn">Remove</button>
+    </div>
+</div>

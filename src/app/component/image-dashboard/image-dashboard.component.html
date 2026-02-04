@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <div class="row m-0">
+        <div class="col-md-6 offset-md-3 mb-4">
+            <app-image-form></app-image-form>
+        </div>
+    </div>
+    <div class="row m-0">
+        <div 
+        *ngFor="let img of ImgArr trackBy : trackById"
+        class="col-md-4">
+       <app-image-list [imageObj] ="img">
+
+       </app-image-list>
+    </div>
+    </div>
+</div>

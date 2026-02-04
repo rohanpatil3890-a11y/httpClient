@@ -1,0 +1,33 @@
+<table class="table table-bordered bg-white">
+    <thead>
+        <tr>
+            <th>Sr No</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Edit</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of StudentArr let i = index trackBy : trackById">
+            <td>{{i + 1}}</td>
+            <td>{{std.fname}} {{std.lname}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+            <td><button 
+                (click)="onEdit(std)"
+                mat-mini-fab color="primary">
+                    <mat-icon>edit</mat-icon>
+                </button></td>
+            <td>
+
+                <button 
+                (click)="RemoveStd(std.stdId)"
+                mat-mini-fab color="warn">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

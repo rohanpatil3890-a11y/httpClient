@@ -1,0 +1,17 @@
+<div class="card my-4">
+    <div class="card-header">
+        {{postObj.title}}
+    </div>
+    <div class="card-body">
+        {{postObj.body}}
+    </div>
+    <div class="card-footer d-flex justify-content-between" >
+        <button
+        (click)="onEdit()"
+        class="btn btn-sm btn-primary">Edit</button>
+        <button
+        (click)="onRemove(postObj.id)"
+        class="btn btn-sm btn-danger">Remove</button>
+    </div>
+</div>
+

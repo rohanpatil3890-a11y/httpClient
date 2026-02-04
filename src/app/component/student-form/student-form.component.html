@@ -1,0 +1,53 @@
+
+<div class="card p-3">
+    <form [formGroup]="StudentForm" (ngSubmit)="newStudentAdd()">
+        <div class="form-group">
+            <label for="fname">Fname</label>
+            <input formControlName="fname" type="text" class="form-control">
+            <strong class="text-danger" *ngIf="formcontrols['fname'].touched && formcontrols['fname'].hasError('required')">
+                fname feild is required
+            </strong>
+            <strong class="text-danger" *ngIf="formcontrols['fname'].dirty && formcontrols['fname'].hasError('pattern')">
+                only alfabates required
+            </strong>
+        </div>
+        <div class="form-group">
+            <label for="lname">Lname</label>
+            <input formControlName="lname" type="text" class="form-control">
+            <strong class="text-danger" *ngIf="formcontrols['lname'].touched && formcontrols['lname'].hasError('required')">
+                lname feild is required
+            </strong>
+            <strong class="text-danger" *ngIf="formcontrols['lname'].dirty && formcontrols['lname'].hasError('pattern')">
+                only alfabates required
+            </strong>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input formControlName="email" type="text" class="form-control">
+            <strong class="text-danger" *ngIf="formcontrols['email'].touched && formcontrols['email'].hasError('required')">
+                email feild is required
+            </strong>
+            <strong class="text-danger" *ngIf="formcontrols['email'].dirty && formcontrols['email'].hasError('pattern')">
+               plz enter valid email id (jhondoi@gmail.com)
+            </strong>
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact</label>
+            <input formControlName="contact" type="text" class="form-control">
+            <strong class="text-danger" *ngIf="formcontrols['contact'].touched && formcontrols['contact'].hasError('required')">
+                contact feild is required
+            </strong>
+             <strong class="text-danger" *ngIf="formcontrols['contact'].dirty && formcontrols['contact'].hasError('pattern')">
+               only number allowed (10 digits)
+            </strong>
+        </div>
+        <button 
+        *ngIf="!isInEditMode"
+        class="btn btn-block btn-sm btn-primary">Add Student</button>
+         <button 
+         (click)="onUpdateStd()"
+         type="button"
+        *ngIf="isInEditMode"
+        class="btn btn-block btn-sm btn-success">Update Student</button>
+    </form>
+</div>

@@ -1,0 +1,31 @@
+
+.card{
+    // height: 100vh;
+    width: 100%;
+    margin-bottom: 10px;
+
+    .cardImg img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+
+   
+}
+
+.ClickBtn {
+  display: inline-block;     
+  padding: 5px 12px;    
+  background-color: #6899e1;  
+  color: #fff;               
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.ClickBtn:hover {
+  background-color: #0b5ed7;
+}
+
+}
