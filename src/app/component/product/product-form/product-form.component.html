@@ -1,0 +1,48 @@
+<div class="card p-3 my-4">
+  <form [formGroup]="productform" (ngSubmit)="AddProductCard()">
+
+    <div class="form-group d-flex justify-content-between align-items-center">
+      <label class="mr-2">Title:</label>
+      <input formControlName="title" type="text" class="form-control ml-2">
+
+      <label class="ml-2">Category:</label>
+      <input formControlName="category" type="text" class="form-control ml-2">
+    </div>
+
+    <div class="form-group d-flex justify-content-between align-items-center">
+      <label class="mr-2">Price:</label>
+      <input formControlName="price" type="text" class="form-control ml-2">
+
+      <label class="ml-2">Rating:</label>
+      <select formControlName="rating" class="form-control ml-2">
+        <option value="">Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Description:</label>
+      <textarea formControlName="description" class="form-control"></textarea>
+
+      <label class="mt-2">Image Url:</label>
+      <input type="text" formControlName="img" class="form-control">
+    </div>
+
+    <button
+    *ngIf="!isinEditMode"
+    type="submit" mat-raised-button color="primary" class="AddBtn w-100">
+      Add
+    </button>
+    <button
+    *ngIf="isinEditMode"
+    (click)="onUpdate()"
+    type="button" mat-raised-button color="primary" class="AddBtn w-100">
+      Update
+    </button>
+
+  </form>
+</div>

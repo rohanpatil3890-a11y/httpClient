@@ -1,0 +1,40 @@
+
+
+
+
+<div class="container">
+  <mat-card class="product-card d-flex flex-column h-100">
+
+    <img mat-card-image [src]="p.img" alt="product">
+
+    <mat-card-content>
+      <mat-chip color="primary" selected>{{ p.category }}</mat-chip>
+
+      <h2 class="title">{{ p.title }}</h2>
+
+      <p class="desc">{{ p.description }}</p>
+
+      <div class="info">
+        <span class="price">₹{{ p.price}}</span>
+        <span class="rating">
+          <mat-icon color="warn">star</mat-icon>
+          {{ p.rating }}
+        </span>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions class="d-flex justify-content-between">
+      <button
+      (click)="onEdit()"
+      mat-stroked-button color="primary">
+        Edit
+      </button>
+      <button
+      (click)="onRemove()"
+      mat-stroked-button color="accent">
+        Remove
+      </button>
+    </mat-card-actions>
+
+  </mat-card>
+</div>

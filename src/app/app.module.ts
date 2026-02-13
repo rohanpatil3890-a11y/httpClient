@@ -17,6 +17,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 import { TodosComponent } from './component/todos/todos.component';
@@ -29,6 +31,9 @@ import { StudentListComponent } from './component/student-list/student-list.comp
 import { ImageDashboardComponent } from './component/image-dashboard/image-dashboard.component';
 import { ImageListComponent } from './component/image-list/image-list.component';
 import { ImageFormComponent } from './component/image-form/image-form.component';
+import { ProductDashboardComponent } from './component/product/product-dashboard/product-dashboard.component';
+import { ProductFormComponent } from './component/product/product-form/product-form.component';
+import { ProductCardComponent } from './component/product/product-card/product-card.component';
 // import {MatProgressSpinner} from '@angular/material/progress-spinner';
 
 
@@ -47,7 +52,10 @@ import { ImageFormComponent } from './component/image-form/image-form.component'
     StudentListComponent,
     ImageDashboardComponent,
     ImageListComponent,
-    ImageFormComponent
+    ImageFormComponent,
+    ProductDashboardComponent,
+    ProductFormComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +67,9 @@ import { ImageFormComponent } from './component/image-form/image-form.component'
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatChipsModule
 
 
   ],
